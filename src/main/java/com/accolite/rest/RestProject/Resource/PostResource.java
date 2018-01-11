@@ -20,14 +20,14 @@ public class PostResource {
 PostService service = new PostService();
 	
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public List<Post> getAllPosts(@PathParam("userID") int userID) {
 		return service.getPosts(userID);
 	}
 	
 	@Path("/{id}")
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Post getPostByID(@PathParam("id") int id, @PathParam("userID") int userID) {
 		return service.getPostByID(id);
 	}
