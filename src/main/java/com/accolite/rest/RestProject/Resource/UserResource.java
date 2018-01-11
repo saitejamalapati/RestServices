@@ -20,14 +20,14 @@ public class UserResource {
 	UserService service = new UserService();
 	
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public List<User> getAllUsers() {
 		return service.getUsers();
 	}
 	
 	@Path("/{id}")
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public User getUserByID(@PathParam("id") int id) {
 		return service.getUserByID(id);
 	}
